@@ -1,7 +1,7 @@
 <template>
   <header class="header">
-    <h2 class="header-logo">{{headerTitle}}</h2>
-    <nav class="nav-group" v-if="isShow">
+    <h2 class="header-logo">loveBook</h2>
+    <nav class="nav-group">
       <h3 :class="['nav-item', { active: sexType == 'male'}]" @click="changSex('male')">
         男生
       </h3>
@@ -10,11 +10,11 @@
       </h3>
     </nav>
     <div class="header-search">
-      <router-link>
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-search"></use>
-        </svg>
-      </router-link>
+      <!--<router-link :to="">-->
+        <!--<svg class="icon" aria-hidden="true">-->
+          <!--<use xlink:href="#icon-search"></use>-->
+        <!--</svg>-->
+      <!--</router-link>-->
     </div>
   </header>
 </template>
