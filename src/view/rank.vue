@@ -1,7 +1,7 @@
 <template>
-  <section class="shelf">
+  <section class="rank">
     <header-bar></header-bar>
-    <empty></empty>
+    <a>rank</a>
     <tabbar></tabbar>
   </section>
 </template>
@@ -10,13 +10,11 @@
   import { mapState, mapMutations } from 'vuex';
   import headerBar from '@/components/Header';
   import tabbar from '@/components/Tabbar';
-  import empty from '@/components/Empty';
 export default {
-  name: 'shelf',
+  name: 'rank',
   components: {
     tabbar,
     headerBar,
-    empty
   },
   data () {
     return {
@@ -30,7 +28,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .shelf {
+  .rank {
     margin: 50px 0 70px;
   }
 </style>
