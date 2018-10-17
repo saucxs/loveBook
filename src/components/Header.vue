@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <h2 class="header-logo">{{systemName}}</h2>
+    <h2 class="header-logo">{{systemName}}--{{headerTitle}}</h2>
   </header>
 </template>
 
@@ -15,9 +15,10 @@ export default {
   },
   computed: {
     ...mapGetters([
-      "systemName"
+      "systemName",
+      "headerTitle"
     ])
-  },
+  }
 }
 </script>
 

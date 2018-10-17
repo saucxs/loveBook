@@ -1,1 +1,2 @@
+export const HEADER_TITLE = 'HEADER_TITLE';
 export const FEATURED_TYPE = 'FEATURED_TYPE';

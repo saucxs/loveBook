@@ -14,7 +14,7 @@
     </router-link>
     <router-link :to="{ name: 'featured' }" class="tab-item" exact>
       <i class="el-icon-tickets"></i>
-      <p class="tab-item-label">类目4</p>
+      <p class="tab-item-label">热门</p>
     </router-link>
 
   </section>

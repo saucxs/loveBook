@@ -24,7 +24,7 @@ export default {
     }
   },
   created() {
-
+    this.$store.commit('HEADER_TITLE', '书架');
   },
 }
 </script>
