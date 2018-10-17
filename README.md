@@ -9,7 +9,10 @@ vue2 + vuex + vue-router + webpack + ES6 + axios + sass
 [https://github.com/saucxs/loveBook](https://github.com/saucxs/loveBook) 
 
 ### 项目截图
+#### 热门模块
 ![热门模块](./screenshot/photo2.png)
+#### 书籍模块
+![书籍模块](./screenshot/photo3.png)
 
 ### 版本功能
 - [x] Element UI
