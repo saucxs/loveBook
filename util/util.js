@@ -17,6 +17,18 @@ export const setStore = (name, content) => {
   window.localStorage.setItem(storePrefix + name, content);
 }
 
+// 获取localStorage
+export const getStore = name => {
+  if (!name) return;
+  return window.localStorage.getItem(storePrefix + name);
+}
+
+// 删除localStorage
+export const removeStore = name => {
+  if (!name) return;
+  window.localStorage.removeItem(storePrefix + name);
+}
+
 export const debounce = (fn, delay, timeout) => {
   var timer = null;
   var last = new Date().getTime();

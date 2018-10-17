@@ -26,4 +26,15 @@ export default  {
       size: size
     }, 'post');
   },
+
+  getBook(id) {
+    return async(apiUrl + '/book/' + id);
+  },
+
+  getReview(id, limit = 5) {
+    return async(apiUrl + '/post/review/best-by-book', {
+      book: id,
+      limit: limit
+    }).then(data => data.reviews);
+  },
 }

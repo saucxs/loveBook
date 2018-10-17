@@ -39,7 +39,7 @@ export default {
   bottom: 0;
   z-index: 1;
   display: flex;
-  height: 46px;
+  height: 50px;
   background-color: #fff;
   border-top: 1px solid rgba(0, 0, 0, .1);
   box-sizing: border-box;

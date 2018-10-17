@@ -5,6 +5,8 @@ import Category from '@/view/category';
 import Rank from '@/view/rank';
 import Featured from '@/view/featured';
 import List from '@/view/list';
+import Book from '@/view/book';
+// import Read from '@/view/Read';
 
 Vue.use(Router)
 
@@ -36,5 +38,15 @@ export default new Router({
       name: 'list',
       component: List
     },
+    {
+      path: '/book/:id',
+      name: 'book',
+      component: Book
+    },
+    // {
+    //   path: '/read/:id',
+    //   name: 'read',
+    //   component: Read
+    // }
   ]
 })

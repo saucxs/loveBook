@@ -4,6 +4,7 @@
             <li class="book-list-li book-list-li-comm" v-for="(book,index) in bookList" :key="book._id + index">
                 <router-link :to="{ name: 'book', params: {id: book._id} }">
                     <img class="book-list-book-cover fl" :src="book.cover | setCover">
+                  <!--书籍列表-->
                     <template v-if="headerType === type">
                         <div class="book-list-book-info book-list-book-info-rank">
                             <h3 class="book-title">{{ book.title }}</h3>
@@ -27,6 +28,7 @@
                             </p>
                         </div>
                     </template>
+                  <!--书籍详情-->
                     <template v-else>
                         <div class="book-list-book-info">
                             <h3 class="book-title">{{ book.title }}</h3>
