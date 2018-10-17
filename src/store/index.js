@@ -1,18 +1,19 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import getters from './getters';
-import mutations from './mutations';
-import actions from './action';
+import * as actions from './actions';
+import * as getters from './getters';
+
+/*引入业务模块*/
+import common from './modules/common'
+import loveBook from './modules/lovebook'
 
 Vue.use(Vuex);
 
-const state = {
-
-}
-
 export default new Vuex.Store({
-  state,
+  actions,
   getters,
-  mutations,
-  actions
+  modules: {
+    common,
+    loveBook
+  }
 })

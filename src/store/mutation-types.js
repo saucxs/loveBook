@@ -1,1 +1,1 @@
-export const INIT_STATE = 'INIT_STATE';
+export const FEATURED_TYPE = 'FEATURED_TYPE';

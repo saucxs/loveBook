@@ -1,18 +1,23 @@
 <template>
   <header class="header">
-    <h2 class="header-logo">loveBook</h2>
+    <h2 class="header-logo">{{systemName}}</h2>
   </header>
 </template>
 
 <script>
-  import { mapState } from 'vuex';
+  import { mapGetters, mapActions } from 'vuex';
 export default {
-  name: 'tababr',
+  name: 'header',
   data () {
     return {
 
     }
-  }
+  },
+  computed: {
+    ...mapGetters([
+      "systemName"
+    ])
+  },
 }
 </script>
 
@@ -30,43 +35,12 @@ export default {
     box-sizing: border-box;
     z-index: 99;
 
-  h2.header-logo {
-    position: absolute;
-    top: 12px;
-    left: 15px;
-    color: #fff;
-    line-height: 20px;
-  }
-  .nav-group {
-    margin: 10px auto;
-    display: table;
-    border: 1px solid #fff;
-    border-radius: 4px;
-
-  .nav-item {
-    display: table-cell;
-    font-weight: 400;
-    line-height: 20px;
-    padding: 0 10px;
-    color: #fff;
-
-  &.active {
-     color: #666;
-     background-color: #fff;
-   }
-  }
-  }
-
-  .header-search {
-    position: absolute;
-    display: inline-block;
-    top: 12px;
-    right: 15px;
-
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
-  }
+    h2.header-logo {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      color: #fff;
+      line-height: 20px;
+    }
   }
 </style>
