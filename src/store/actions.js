@@ -14,3 +14,17 @@ export const getBooks = ({commit}, parmas) => {
     return res;
   })
 }
+
+export const getRecommend = ({commit}, parmas) => {
+  return Api.getRecommend(parmas).then(res => {
+    // commit(types.FEATURED_TYPE, res.data)
+    return res;
+  })
+}
+
+export const getBookList = ({commit}, parmas) => {
+  return Api.getBookList(parmas).then(res => {
+    // commit(types.FEATURED_TYPE, res.data)
+    return res;
+  })
+}

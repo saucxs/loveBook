@@ -4,6 +4,7 @@ import Shelf from '@/view/shelf';
 import Category from '@/view/category';
 import Rank from '@/view/rank';
 import Featured from '@/view/featured';
+import List from '@/view/list';
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/featured',
       name: 'featured',
       component: Featured
+    },
+    {
+      path: '/list/:id',
+      name: 'list',
+      component: List
     },
   ]
 })

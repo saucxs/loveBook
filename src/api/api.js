@@ -13,4 +13,17 @@ export default  {
     return async(apiUrl + '/recommendPage/books/' + id)
       .then(data => data.data);
   },
+
+  getRecommend(id) {
+    return async(apiUrl + '/book/' + id + '/recommend')
+      .then(data => data.books);
+  },
+
+  getBookList(id, st = 1, size = 10) {
+    return async(apiUrl + '/recommendPage/node/books/all/' + id, {
+      ajax: 'ajax',
+      st: st,
+      size: size
+    }, 'post');
+  },
 }
