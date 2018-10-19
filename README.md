@@ -8,7 +8,6 @@ vue2 + vuex + vue-router + webpack + ES6 + axios + sass
 ### 源码地址
 [https://github.com/saucxs/loveBook](https://github.com/saucxs/loveBook) 
 
-
 ### 项目截图
 #### 热门模块
 ![热门模块](./screenshot/photo2.png)

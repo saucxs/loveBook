@@ -23,25 +23,19 @@
       <ul class="read-set-bg-list">
         <li v-for="skin in skinBgList" class="read-set-bg-item" @click="changeBkColor(skin)" :key="skin">
                     <span :class="[skin, { active: skin === skinColor }]">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-selected"></use>
-                        </svg>
+                         <i class="el-icon-loading"></i>
                     </span>
         </li>
       </ul>
       <div class="read-set-switch">
         <div class="read-set-switch-item">
                     <span :class="{ nochange: fontSize <= 10 }" @click="changeFontSize(false)">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-font-reduce"></use>
-                        </svg>
+                      <i class="el-icon-zoom-out"></i>
                     </span>
         </div>
         <div class="read-set-switch-item">
                     <span :class="{ nochange: fontSize >= 24 }" @click="changeFontSize(true)">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-font-add"></use>
-                        </svg>
+                       <i class="el-icon-zoom-in"></i>
                     </span>
         </div>
       </div>
@@ -50,35 +44,27 @@
       <ul class="footer-tab">
         <li class="footer-tab-item" @click="showMenu">
           <div class="footer-tab-icon">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-menu"></use>
-            </svg>
+            <i class="el-icon-tickets"></i>
           </div>
           <p class="footer-tab-label">目录</p>
         </li>
         <li class="footer-tab-item" @click="switchMode">
           <template v-if="nightMode">
             <div class="footer-tab-icon">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-day"></use>
-              </svg>
+              <i class="el-icon-view"></i>
             </div>
             <p class="footer-tab-label">日间模式</p>
           </template>
           <template v-else>
             <div class="footer-tab-icon">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-night"></use>
-              </svg>
+              <i class="el-icon-view"></i>
             </div>
             <p class="footer-tab-label">夜间模式</p>
           </template>
         </li>
         <li class="footer-tab-item" @click="showOptSet">
           <div class="footer-tab-icon">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-font"></use>
-            </svg>
+            <i class="el-icon-setting"></i>
           </div>
           <p class="footer-tab-label">设置</p>
         </li>
@@ -175,6 +161,9 @@
 
 <style lang="scss">
   .read-content {
+    i {
+      font-size: 20px
+    }
     position: relative;
     overflow: hidden;
     color: rgba(0, 0, 0, .85);
