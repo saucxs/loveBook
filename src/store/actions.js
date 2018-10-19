@@ -42,3 +42,17 @@ export const getReview = ({commit}, parmas) => {
     return res;
   })
 }
+
+export const getChapters = ({commit}, parmas) => {
+  return Api.getChapters(parmas).then(res => {
+    // commit(types.FEATURED_TYPE, res.data)
+    return res;
+  })
+}
+
+export const getChapterContent = ({commit}, parmas) => {
+  return Api.getChapterContent(parmas).then(res => {
+    // commit(types.FEATURED_TYPE, res.data)
+    return res;
+  })
+}

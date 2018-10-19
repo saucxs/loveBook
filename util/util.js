@@ -8,6 +8,9 @@ export const BOOK_PAGE = 'BOOK';
 // 图片根路径
 export const staticPath = 'http://statics.zhuishushenqi.com';
 
+// 存储localStorage时设置前缀
+const storePrefix = 'RM_';
+
 // 存储localStorage
 export const setStore = (name, content) => {
   if (!name) return;

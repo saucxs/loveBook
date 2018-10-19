@@ -37,4 +37,25 @@ export default  {
       limit: limit
     }).then(data => data.reviews);
   },
+
+  getChapters(id) {
+    return async(apiUrl + '/btoc', {
+      view: 'summary',
+      book: id
+    }).then(data => {
+      return async(apiUrl + '/btoc/' + data[0]._id, {
+        view: 'chapters',
+        channel: 'mweb'
+      }).then(data => {
+        return data.chapters
+      });
+    })
+  },
+
+  getChapterContent(id) {
+    return async(chapterUrl + '/chapter/' + id, {
+      cv: '1495097622174'
+    }).then(data => data.chapter);
+  },
+
 }

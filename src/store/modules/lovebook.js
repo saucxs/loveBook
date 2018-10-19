@@ -1,5 +1,6 @@
 import {
-  FEATURED_TYPE, SET_HEADER_INFO, SET_CUR_BOOK, ADD_TO_SHELF
+  FEATURED_TYPE, SET_HEADER_INFO, SET_CUR_BOOK, ADD_TO_SHELF, SET_NIGHT_MODE,
+  SET_SKIN_COLOR, SET_FONT_SIZE
 } from "../mutation-types.js";
 
 import {
@@ -54,7 +55,20 @@ const mutations = {
       state.shelfBookList.push(book);
       setStore('SHEFLBOOK', state.shelfBookList);
     }
-  }
+  },
+  [SET_NIGHT_MODE](state, isNight) {
+    state.nightMode = isNight;
+    setStore('NIGHTMODE', state.nightMode);
+  },
+  [SET_SKIN_COLOR](state, skinColor) {
+    state.skinColor = skinColor;
+    setStore('SKINCOLOR', state.skinColor);
+  },
+  [SET_FONT_SIZE](state, fontSize) {
+    state.fontSize = fontSize;
+    setStore('FONTSIZE', state.fontSize);
+  },
+
 }
 
 export default {
