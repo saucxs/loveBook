@@ -62,4 +62,22 @@ export default  {
     return async(apiUrl + '/cats/lv2/statistics');
   },
 
+  getCatBooks(gender, type = 'hot', major, minor = '', start = 0, limit = 20) {
+    return async(apiUrl + '/book/by-categories', {
+      gender: gender,
+      type: type,
+      major: major,
+      minor: minor,
+      start: start,
+      limit: limit
+    })
+      .then(data => data.books);
+  },
+
+  getMinorList() {
+    return async(apiUrl + '/cats/lv2');
+  },
+
+
+
 }

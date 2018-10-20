@@ -63,3 +63,17 @@ export const getCategory = ({commit}, parmas) => {
     return res;
   })
 }
+
+export const getCatBooks = ({commit}, parmas) => {
+  return Api.getCatBooks(parmas).then(res => {
+    // commit(types.FEATURED_TYPE, res.data)
+    return res;
+  })
+}
+
+export const getMinorList = ({commit}, parmas) => {
+  return Api.getMinorList(parmas).then(res => {
+    // commit(types.FEATURED_TYPE, res.data)
+    return res;
+  })
+}

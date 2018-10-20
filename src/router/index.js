@@ -7,6 +7,7 @@ import Featured from '@/view/featured';
 import List from '@/view/list';
 import Book from '@/view/book';
 import Read from '@/view/Read';
+import CatList from '@/view/catlist';
 
 Vue.use(Router)
 
@@ -47,6 +48,11 @@ export default new Router({
       path: '/read/:id',
       name: 'read',
       component: Read
+    },
+    {
+      path: '/catlist/:major',
+      name: 'catlist',
+      component: CatList
     }
   ]
 })
