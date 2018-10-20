@@ -5,7 +5,7 @@
       <p class="tab-item-label">类目1</p>
     </router-link>
     <router-link :to="{ name: 'category' }" class="tab-item" exact>
-      <i class="el-icon-tickets"></i>
+      <i class="el-icon-menu"></i>
       <p class="tab-item-label">分类</p>
     </router-link>
     <router-link :to="{ name: 'rank' }" class="tab-item" exact>
@@ -13,7 +13,7 @@
       <p class="tab-item-label">类目3</p>
     </router-link>
     <router-link :to="{ name: 'featured' }" class="tab-item" exact>
-      <i class="el-icon-tickets"></i>
+      <i class="el-icon-mobile-phone"></i>
       <p class="tab-item-label">热门</p>
     </router-link>
 
@@ -43,6 +43,7 @@ export default {
   background-color: #fff;
   border-top: 1px solid rgba(0, 0, 0, .1);
   box-sizing: border-box;
+  font-size: 16px;
   .tab-item{
     display: block;
     flex: 1;
@@ -65,7 +66,7 @@ export default {
   }
   .tab-item-label {
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 </style>

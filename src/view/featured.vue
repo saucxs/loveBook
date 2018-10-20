@@ -52,7 +52,6 @@ export default {
     ]),
     fetchData(){
       this.getFeaturedData().then(data => {
-       console.log(data, 'data1');
        data = Array.from(data).sort((a,b) => {
          return a.order - b.order;
        });
