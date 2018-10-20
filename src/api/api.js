@@ -58,4 +58,8 @@ export default  {
     }).then(data => data.chapter);
   },
 
+  getCategory() {
+    return async(apiUrl + '/cats/lv2/statistics');
+  },
+
 }

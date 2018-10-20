@@ -56,3 +56,10 @@ export const getChapterContent = ({commit}, parmas) => {
     return res;
   })
 }
+
+export const getCategory = ({commit}, parmas) => {
+  return Api.getCategory(parmas).then(res => {
+    // commit(types.FEATURED_TYPE, res.data)
+    return res;
+  })
+}

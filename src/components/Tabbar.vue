@@ -6,7 +6,7 @@
     </router-link>
     <router-link :to="{ name: 'category' }" class="tab-item" exact>
       <i class="el-icon-tickets"></i>
-      <p class="tab-item-label">类目2</p>
+      <p class="tab-item-label">分类</p>
     </router-link>
     <router-link :to="{ name: 'rank' }" class="tab-item" exact>
       <i class="el-icon-tickets"></i>
