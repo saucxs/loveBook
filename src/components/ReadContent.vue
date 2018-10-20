@@ -2,9 +2,9 @@
   <section :class="['read-content', skinColor, { night: nightMode }]">
     <div class="read-action-mid" @click="showOpt"></div>
     <div :class="['read-content-header', { 'read-opt': isShowOpt }]">
-            <span class="back" @click="$router.go(-1)">
-                <i class="el-icon-arrow-left"></i>
-            </span>
+      <span class="back" @click="$router.go(-1)">
+        <i class="el-icon-arrow-left"></i>
+      </span>
     </div>
     <div :class="['read-join-shelf', { 'read-opt': isShowOpt }]"
          @click="addToShelf">
@@ -22,21 +22,21 @@
     <div :class="['read-content-set', { 'read-opt': isShowSet }]">
       <ul class="read-set-bg-list">
         <li v-for="skin in skinBgList" class="read-set-bg-item" @click="changeBkColor(skin)" :key="skin">
-                    <span :class="[skin, { active: skin === skinColor }]">
-                         <i class="el-icon-loading"></i>
-                    </span>
+          <span :class="[skin, { active: skin === skinColor }]">
+            <i class="el-icon-loading"></i>
+          </span>
         </li>
       </ul>
       <div class="read-set-switch">
         <div class="read-set-switch-item">
-                    <span :class="{ nochange: fontSize <= 10 }" @click="changeFontSize(false)">
-                      <i class="el-icon-zoom-out"></i>
-                    </span>
+          <span :class="{ nochange: fontSize <= 10 }" @click="changeFontSize(false)">
+            <i class="el-icon-zoom-out"></i>
+          </span>
         </div>
         <div class="read-set-switch-item">
-                    <span :class="{ nochange: fontSize >= 24 }" @click="changeFontSize(true)">
-                       <i class="el-icon-zoom-in"></i>
-                    </span>
+          <span :class="{ nochange: fontSize >= 24 }" @click="changeFontSize(true)">
+            <i class="el-icon-zoom-in"></i>
+          </span>
         </div>
       </div>
     </div>

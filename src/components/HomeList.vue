@@ -9,9 +9,8 @@
             <p class="book-summary text-line-comm gray">{{ book.shortIntro }}</p>
             <p class="book-info">
 						<span class="book-author fl gray">
-              <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-author"></use>
-              </svg>{{ book.author }}
+              <i class="el-icon-edit"></i>
+              {{ book.author }}
             </span>
             <span class="book-tags fr">
               <em class="small-tag gray">{{ book.majorCate }}</em>

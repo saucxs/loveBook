@@ -94,7 +94,7 @@ export default {
     display: inline-block;
     color: #33373d;
     line-height: 1;
-    border-left: 2px solid #ed424b;
+    border-left: 4px solid #5579ee;
     padding-left: 8px;
   }
   .book-list-more {

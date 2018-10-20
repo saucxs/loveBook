@@ -5,10 +5,14 @@
         <router-link :to="{ name: 'list', params: { id: curBook.id } }" class="more red">更多</router-link>
       </h4>
       <ul class="recommend-list">
-        <li class="recommend-item" v-for="(recommend, index) in recommendList" v-if="index < 4" :key="recommend._id">
-          <img :src="recommend.cover | setCover" alt="recommend.title" class="cover">
-          <p>{{ recommend.title }}</p>
-        </li>
+        <div v-for="(recommend, index) in recommendList" v-if="index < 4" :key="recommend._id">
+          <!--<router-link :to="{ name: 'book', params: {id: recommend._id} }">-->
+            <li class="recommend-item" @click="bookInfo(recommend._id)">
+                <img :src="recommend.cover | setCover" alt="recommend.title" class="cover">
+                <p>{{ recommend.title }}</p>
+            </li>
+          <!--</router-link>-->
+        </div>
       </ul>
     </template>
   </section>
@@ -44,7 +48,10 @@
     methods: {
       ...mapActions([
         "getRecommend"
-      ])
+      ]),
+      bookInfo(bookId){
+        this.$router.push({ name: 'book', params: { id: bookId }})
+      }
     }
   }
 </script>
@@ -59,7 +66,7 @@
     font-size: 16px;
     color: #33373d;
     line-height: 1;
-    border-left: 2px solid #ed424b;
+    border-left: 4px solid #5579ee;
     padding-left: 13px;
     margin: 10px 0;
 

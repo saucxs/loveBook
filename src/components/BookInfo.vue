@@ -69,27 +69,34 @@ export default {
             return this.book.serializeWordCount < 0 ? 0 : this.book.serializeWordCount;
         }
 	},
+  watch:{
+    '$route':'getBookInfo'
+  },
 	created() {
-		this.getBook(this.curBook.id)
-			.then(data => {
-				this.book = data;
-
-				let tmpBook = this.curBook;
-				tmpBook.title = data.title;
-				tmpBook.cover = staticPath + data.cover;
-				tmpBook.author = data.author;
-				tmpBook.lastChapter = data.lastChapter;
-				tmpBook.updated = data.updated;
-        this.$store.commit('SET_CUR_BOOK', tmpBook);
-				this.$nextTick(function () {
-					this.$emit('load-result');
-				})
-			});
+    this.getBookInfo();
 	},
 	methods: {
     ...mapActions([
       "getBook"
     ]),
+    getBookInfo(){
+      console.log(this.$route.params.id, '1111111111111111111111111111111111111')
+      let data = this.$route.params.id || this.curBook.id;
+      this.getBook(data)
+        .then(data => {
+          this.book = data;
+          let tmpBook = this.curBook;
+          tmpBook.title = data.title;
+          tmpBook.cover = staticPath + data.cover;
+          tmpBook.author = data.author;
+          tmpBook.lastChapter = data.lastChapter;
+          tmpBook.updated = data.updated;
+          this.$store.commit('SET_CUR_BOOK', tmpBook);
+          this.$nextTick(function () {
+            this.$emit('load-result');
+          })
+        });
+    },
 		spreadIntro: function(e) {
 			this.isPart = !this.isPart;
 		}
