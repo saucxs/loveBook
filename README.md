@@ -8,6 +8,9 @@ vue2 + vuex + vue-router + webpack + ES6 + axios + sass
 ### 源码地址
 [https://github.com/saucxs/loveBook](https://github.com/saucxs/loveBook) 
 
+### 演示地址
+[线上地址（正在开发其他模块）](http://book.mwcxs.top) 
+
 ### 项目截图
 #### 热门模块
 ![热门模块](./screenshot/photo2.png)
@@ -24,7 +27,6 @@ vue2 + vuex + vue-router + webpack + ES6 + axios + sass
    - 完成热门模块
 + 2018.10.21
     - 分类模块
-    - 排行模块
 
 
 ## 项目运行
