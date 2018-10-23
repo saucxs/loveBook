@@ -4,6 +4,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/saucxs/loveBook.svg)](https://github.com/saucxs/loveBook/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/saucxs/loveBook.svg)](https://github.com/saucxs/loveBook/network)
 [![GitHub issues](https://img.shields.io/github/issues/saucxs/loveBook.svg)](https://github.com/saucxs/loveBook/issues)
+
 loveBook爱上阅读，是一款webapp的读小说等书籍的并且阅读的应用。如果觉得可以，欢迎fork和star。
 自己最近在追斗破苍穹电视剧，下班时候在地铁上总听到有人说，斗破苍穹书籍比电视剧好看，于是想弄个看书的webapp，这样在手机上看电子书很爽。找了好久发现发现只有追书神器的api暴露出来了，起点之类的api找不到。
 
