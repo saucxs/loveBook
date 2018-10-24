@@ -50,7 +50,6 @@
       fetchData: function() {
         this.getBooks(this.bookInfo.id)
           .then(data => {
-            console.log(data,'data')
             data = data.map(value => {
               return value.book;
             });

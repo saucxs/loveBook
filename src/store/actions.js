@@ -77,3 +77,11 @@ export const getMinorList = ({commit}, parmas) => {
     return res;
   })
 }
+
+export const getShelfBookUpdate = ({commit}, parmas) => {
+  return Api.getShelfBookUpdate(parmas).then(res => {
+    // commit(types.FEATURED_TYPE, res.data)
+    return res;
+  })
+}
+

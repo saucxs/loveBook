@@ -23,19 +23,19 @@
       <ul class="read-set-bg-list">
         <li v-for="skin in skinBgList" class="read-set-bg-item" @click="changeBkColor(skin)" :key="skin">
           <span :class="[skin, { active: skin === skinColor }]">
-            <i class="el-icon-loading"></i>
+            <!--<i class="el-icon-loading"></i>-->
           </span>
         </li>
       </ul>
       <div class="read-set-switch">
         <div class="read-set-switch-item">
           <span :class="{ nochange: fontSize <= 10 }" @click="changeFontSize(false)">
-            <i class="el-icon-zoom-out"></i>
+            <i class="el-icon-minus"></i>
           </span>
         </div>
         <div class="read-set-switch-item">
           <span :class="{ nochange: fontSize >= 24 }" @click="changeFontSize(true)">
-            <i class="el-icon-zoom-in"></i>
+            <i class="el-icon-plus"></i>
           </span>
         </div>
       </div>

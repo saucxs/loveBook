@@ -2,16 +2,16 @@
   <section class="tabbar">
     <router-link :to="{ name: 'shelf' }" class="tab-item" exact>
       <i class="el-icon-tickets"></i>
-      <p class="tab-item-label">类目1</p>
+      <p class="tab-item-label">书架</p>
     </router-link>
     <router-link :to="{ name: 'category' }" class="tab-item" exact>
       <i class="el-icon-menu"></i>
       <p class="tab-item-label">分类</p>
     </router-link>
-    <router-link :to="{ name: 'rank' }" class="tab-item" exact>
-      <i class="el-icon-tickets"></i>
-      <p class="tab-item-label">类目3</p>
-    </router-link>
+    <!--<router-link :to="{ name: 'rank' }" class="tab-item" exact>-->
+      <!--<i class="el-icon-tickets"></i>-->
+      <!--<p class="tab-item-label">类目3</p>-->
+    <!--</router-link>-->
     <router-link :to="{ name: 'featured' }" class="tab-item" exact>
       <i class="el-icon-mobile-phone"></i>
       <p class="tab-item-label">热门</p>

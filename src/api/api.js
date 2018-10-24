@@ -78,6 +78,12 @@ export default  {
     return async(apiUrl + '/cats/lv2');
   },
 
+  getShelfBookUpdate(ids) {
+    return async(apiUrl + '/book', {
+      view: 'updated',
+      id: ids.toString()
+    })
+  },
 
 
 }

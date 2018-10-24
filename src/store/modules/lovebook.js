@@ -1,6 +1,6 @@
 import {
   FEATURED_TYPE, SET_HEADER_INFO, SET_CUR_BOOK, ADD_TO_SHELF, SET_NIGHT_MODE,
-  SET_SKIN_COLOR, SET_FONT_SIZE
+  SET_SKIN_COLOR, SET_FONT_SIZE, DEL_FROM_SHELF, INIT_STATE, SHELF_BOOK_UPDATE
 } from "../mutation-types.js";
 
 import {
@@ -23,11 +23,23 @@ const state = {
 }
 
 const mutations = {
+  [INIT_STATE](state) {
+    let initBookList = getStore('SHEFLBOOK');
+    if (initBookList) {
+      state.shelfBookList = JSON.parse(initBookList);
+    }
+    let initSearchHistory = getStore('SEARCHHISTORY');
+    if (initSearchHistory) {
+      state.searchHistory = JSON.parse(initSearchHistory);
+    }
+    state.nightMode = getStore('NIGHTMODE') === 'true' ? true : false;
+    state.fontSize = Number.isInteger(getStore('FONTSIZE')) ? parseInt(getStore('FONTSIZE')) : 14;
+    state.skinColor = getStore('SKINCOLOR');
+  },
   [FEATURED_TYPE](state, newData){
     state.feature_data = newData;
   },
   [SET_HEADER_INFO](state, { title, type }) {
-    console.log(title, type, '11111111111')
     state.headerTitle = title;
     state.headerType = type;
   },
@@ -67,6 +79,25 @@ const mutations = {
   [SET_FONT_SIZE](state, fontSize) {
     state.fontSize = fontSize;
     setStore('FONTSIZE', state.fontSize);
+  },
+  [DEL_FROM_SHELF](state, bookIds) {
+    state.shelfBookList = state.shelfBookList.filter(value => {
+      return !bookIds.includes(value.id);
+    });
+    setStore('SHEFLBOOK', state.shelfBookList);
+  },
+  [SHELF_BOOK_UPDATE](state, data) {
+    for (let value of Object.values(data)) {
+      for (let [idx, book] of Object.entries(state.shelfBookList)) {
+        if (book.id === value._id) {
+          book.updated = value.updated;
+          book.lastChapter = value.lastChapter;
+          state.shelfBookList[idx] = book;
+          break;
+        }
+      }
+      setStore('SHEFLBOOK', state.shelfBookList);
+    }
   },
 
 }
