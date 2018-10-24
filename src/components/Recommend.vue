@@ -47,10 +47,15 @@
     },
     methods: {
       ...mapActions([
-        "getRecommend"
+        "getRecommend",
+        "getReview"
       ]),
       bookInfo(bookId){
-        this.$router.push({ name: 'book', params: { id: bookId }})
+        this.$router.push({ name: 'book', params: { id: bookId }});
+        this.getReview(bookId)
+          .then(data => {
+            this.$store.commit('REVIEW_LIST', data);
+          })
       }
     }
   }

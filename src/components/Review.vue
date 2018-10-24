@@ -34,7 +34,7 @@ export default {
     name: 'review',
     data() {
         return {
-            reviewList: []
+
         }
     },
 	filters: {
@@ -47,14 +47,16 @@ export default {
 	},
     computed: {
         ...mapGetters([
-            'curBook'
+            'curBook',
+            'reviewList'
         ])
     },
     created() {
         this.staticPath = staticPath;
         this.getReview(this.curBook.id)
             .then(data => {
-                this.reviewList = data;
+              this.$store.commit('REVIEW_LIST', data);
+                // this.reviewList = data;
             })
     },
   methods: {

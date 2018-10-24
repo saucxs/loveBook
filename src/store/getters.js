@@ -10,3 +10,5 @@ export const nightMode = state => state.loveBook.nightMode
 export const skinColor = state => state.loveBook.skinColor
 export const fontSize = state => state.loveBook.fontSize
 export const searchHistory = state => state.loveBook.searchHistory
+
+export const reviewList = state => state.loveBook.reviewList

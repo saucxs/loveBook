@@ -1,7 +1,7 @@
 import {
   FEATURED_TYPE, SET_HEADER_INFO, SET_CUR_BOOK, ADD_TO_SHELF, SET_NIGHT_MODE,
   SET_SKIN_COLOR, SET_FONT_SIZE, DEL_FROM_SHELF, INIT_STATE, SHELF_BOOK_UPDATE,
-  SET_SEARCH_HISTORY, CLEAR_SEARCH_HISTORY
+  SET_SEARCH_HISTORY, CLEAR_SEARCH_HISTORY, REVIEW_LIST
 } from "../mutation-types.js";
 
 import {
@@ -20,7 +20,8 @@ const state = {
   nightMode: false,	//是否夜间模式
   skinColor: '',		//阅读页面背景色
   fontSize: 14,		//设置页面字体大小
-  searchHistory: []	//搜索历史
+  searchHistory: [],	//搜索历史
+  reviewList: []   //书评
 }
 
 const mutations = {
@@ -111,6 +112,10 @@ const mutations = {
   [CLEAR_SEARCH_HISTORY](state) {
     state.searchHistory.splice(0, state.searchHistory.length);
     removeStore('SEARCHHISTORY');
+  },
+
+  [REVIEW_LIST](state, newData){
+    state.reviewList = newData;
   }
 
 }

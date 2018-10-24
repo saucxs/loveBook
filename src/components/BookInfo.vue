@@ -18,9 +18,11 @@
 	</div>
 	<div class="book-intro" @click="spreadIntro" :class="{ part: isPart }">
 		<p class="long-intro">{{ book.longIntro }}</p>
-		<svg class="icon" aria-hidden="true" v-show="isPart">
+    <i v-show="isPart" class="el-icon-arrow-down icon"></i>
+    <i v-show="!isPart" class="el-icon-arrow-up icon"></i>
+		<!--<svg class="icon" aria-hidden="true" v-show="isPart">
 			<use xlink:href="#icon-back"></use>
-		</svg>
+		</svg>-->
 	</div>
 	<div class="book-menu">
 		<router-link :to="{ name: 'read', params: { id: book._id }, query: { menu: true } }">
@@ -28,9 +30,7 @@
 			<p class="menu-content fr gray">
 				{{ book.updated | time }}
 				<span class="split-dot">·</span> {{ book.lastChapter }}
-				<svg class="icon" aria-hidden="true">
-					<use xlink:href="#icon-back"></use>
-				</svg>
+        <i class="el-icon-arrow-right icon"></i>
 			</p>
 		</router-link>
 	</div>
@@ -184,7 +184,7 @@ export default {
         bottom: 0;
         right: 15px;
         font-size: 16px;
-        transform: rotate(270deg);
+        /*transform: rotate(270deg);*/
         z-index: 99;
         color: #999;
         background: rgba(255, 255, 255, .8);
@@ -231,7 +231,7 @@ export default {
             right: 0;
             font-size: 16px;
             color: #999;
-            transform: rotate(180deg);
+            /*transform: rotate(180deg);*/
         }
     }
 }
