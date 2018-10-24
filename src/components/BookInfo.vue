@@ -80,7 +80,6 @@ export default {
       "getBook"
     ]),
     getBookInfo(){
-      console.log(this.$route.params.id, '1111111111111111111111111111111111111')
       let data = this.$route.params.id || this.curBook.id;
       this.getBook(data)
         .then(data => {

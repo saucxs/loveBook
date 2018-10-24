@@ -122,7 +122,6 @@
         this.isShowChapters = true;
       },
       hideMenu: function() {
-        console.log(this.isFromMenu);
         if(this.isFromMenu) {
           this.$router.go(-1);
         }
