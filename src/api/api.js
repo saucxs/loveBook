@@ -85,5 +85,15 @@ export default  {
     })
   },
 
+  getSearchHotKeywords() {
+    return async(apiUrl + '/book/search-hotwords')
+      .then(data => data.searchHotWords);
+  },
+
+  searchByKeyword(keyword) {
+    return async(apiUrl + '/book/fuzzy-search', {
+      query: keyword
+    }).then(data => data.books);
+  }
 
 }

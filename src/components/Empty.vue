@@ -5,7 +5,7 @@
         <use xlink:href="#icon-add_shelf"></use>
       </svg>
     </div>
-    <p class="empty-notice">欢迎来到XXX系统架子</p>
+    <p class="empty-notice">欢迎来到loveBook</p>
   </section>
 </template>
 
@@ -37,6 +37,7 @@
 
   .empty-notice {
     margin-top: 10px;
+    font-size: 18px;
     color: #999;
   }
   }

@@ -1,6 +1,7 @@
 import {
   FEATURED_TYPE, SET_HEADER_INFO, SET_CUR_BOOK, ADD_TO_SHELF, SET_NIGHT_MODE,
-  SET_SKIN_COLOR, SET_FONT_SIZE, DEL_FROM_SHELF, INIT_STATE, SHELF_BOOK_UPDATE
+  SET_SKIN_COLOR, SET_FONT_SIZE, DEL_FROM_SHELF, INIT_STATE, SHELF_BOOK_UPDATE,
+  SET_SEARCH_HISTORY, CLEAR_SEARCH_HISTORY
 } from "../mutation-types.js";
 
 import {
@@ -99,6 +100,18 @@ const mutations = {
       setStore('SHEFLBOOK', state.shelfBookList);
     }
   },
+  [SET_SEARCH_HISTORY](state, keyword) {
+    if(state.searchHistory.indexOf(keyword) > -1) {
+      state.searchHistory.splice(state.searchHistory.indexOf(keyword), 1);
+    }
+    state.searchHistory.unshift(keyword);
+    setStore('SEARCHHISTORY', state.searchHistory);
+  },
+
+  [CLEAR_SEARCH_HISTORY](state) {
+    state.searchHistory.splice(0, state.searchHistory.length);
+    removeStore('SEARCHHISTORY');
+  }
 
 }
 

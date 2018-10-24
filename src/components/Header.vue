@@ -1,6 +1,11 @@
 <template>
   <header class="header">
     <h2 class="header-logo">{{systemName}}--{{headerTitle}}</h2>
+    <div class="header-search">
+      <router-link :to="{ name: 'search' }">
+        <i class="el-icon-search"></i>
+      </router-link>
+    </div>
   </header>
 </template>
 
@@ -42,6 +47,17 @@ export default {
       left: 15px;
       color: #fff;
       line-height: 20px;
+    }
+    .header-search {
+      position: absolute;
+      display: inline-block;
+      top: 12px;
+      right: 15px;
+      font-size: 22px;
+        .icon {
+          width: 20px;
+          height: 20px
+        }
     }
   }
 </style>

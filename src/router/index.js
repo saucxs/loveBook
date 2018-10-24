@@ -8,6 +8,7 @@ import List from '@/view/list';
 import Book from '@/view/book';
 import Read from '@/view/Read';
 import CatList from '@/view/catlist';
+import Search from '@/view/search';
 
 Vue.use(Router)
 
@@ -53,6 +54,11 @@ export default new Router({
       path: '/catlist/:major',
       name: 'catlist',
       component: CatList
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: Search
     }
   ]
 })

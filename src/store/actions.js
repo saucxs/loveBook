@@ -85,3 +85,16 @@ export const getShelfBookUpdate = ({commit}, parmas) => {
   })
 }
 
+export const getSearchHotKeywords = ({commit}, parmas) => {
+  return Api.getSearchHotKeywords(parmas).then(res => {
+    // commit(types.FEATURED_TYPE, res.data)
+    return res;
+  })
+}
+
+export const searchByKeyword = ({commit}, parmas) => {
+  return Api.searchByKeyword(parmas).then(res => {
+    // commit(types.FEATURED_TYPE, res.data)
+    return res;
+  })
+}
