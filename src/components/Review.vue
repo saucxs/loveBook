@@ -13,9 +13,7 @@
                         <p class="title">{{ review.title }}</p>
                         <p class="content text-line-comm">{{ review.content }}</p>
                         <p class="like">
-                            <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-like"></use>
-                            </svg>
+                           <i class="el-icon-star-on"></i>
                             {{ review.likeCount }}
                         </p>
                     </div>
