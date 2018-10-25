@@ -18,21 +18,18 @@ vue2 + vuex + vue-router + webpack + ES6 + axios + sass
 ### 演示地址
 [线上地址（正在开发其他模块）](http://book.mwcxs.top) 
 
-### 项目截图
-#### 热门模块
-![热门模块](./screenshot/photo2.png)
-#### 书籍模块
-![书籍模块](./screenshot/photo3.png)
 
 ### 版本功能
 - [x] Element UI
-- [x] 书籍分类模块
-- [x] 书籍类别列表-男生，女生，出版
-- [x] 书籍详情
-- [x] 热门书籍列表
-- [x] 章节目录
-- [x] 阅读模块
-- [x] 书架模块
+- [x] 热门模块-男生热门，女生热门，女频限免三部分
+- [x] 分类模块-男生，女生，出版三部分
+- [x] 分类详情模块-分为热门，新书，好评，完结，包月，根据小说内容分为全部，东方玄幻，异界大陆，异界争霸，远古神话
+- [x] 书籍详情模块-包含书籍一些基本信息和简介，书籍目录入口，热门书评，同类推荐，包含加入书架功能，和立即阅读
+- [x] 书籍目录模块-包含一共多少章，章节顺序（倒叙）
+- [x] 同类推荐列表模块
+- [x] 阅读模块-包含目录，昼夜阅读模式，以及字体调整和书籍背景颜色设置
+- [x] 书架模块-包含加入到书架展示，以及上次阅读地方存储
+- [x] 搜索模块-包含热搜的内容和历史搜索内容，以及清空历史搜索内容
 
 + 2018.10.17
    - 完成热门模块
@@ -44,10 +41,12 @@ vue2 + vuex + vue-router + webpack + ES6 + axios + sass
     - 完成阅读模块
 + 2018.10.24
     - 完成书架模块
-+ 接下来模块
-    - 搜索功能
++ 2018.10.25
+    - 完成模糊搜索功能
+    - 清空搜索历史功能
+    - 修复bug：部署之后阅读章节返回的错误
 
-## 项目运行
+### 项目运行
 
 ```   
 git clone https://github.com/saucxs/loveBook
@@ -62,6 +61,32 @@ npm run build （部署上线 生成的dist文件夹放到服务器中即可：�
 
 ```
 
-## 说明 
+### 项目截图
+#### 热门模块
+![热门模块](screenshot/photo2_featured.png)
+#### 分类模块
+![分类模块](screenshot/photo4_category.png)
+#### 分类详情模块
+![分类详情模块](screenshot/photo4_categoty_detail.png)
+#### 书籍详情模块
+![书籍详情模块](screenshot/photo3_book_detail.png)
+#### 书籍目录模块
+![书籍目录模块](screenshot/photo3_book_menu.png)
+#### 同类推荐列表模块
+![同类推荐列表模块](screenshot/photo3_same_book_list.png)
+#### 阅读模块
+![阅读模块](screenshot/photo3_reading_now.png)
+#### 阅读模块-夜间
+![阅读模块-夜间](screenshot/photo3_read_night.png)
+#### 立即阅读模块-设置
+![阅读模块-设置](screenshot/photo3_read_setting.png)
+#### 书架模块
+![书架模块](screenshot/photo5_book_shelf.png)
+#### 搜索模块-搜索前
+![搜索模块-1](screenshot/photo5_search_before.png)
+#### 搜索模块-搜索后
+![搜索模块-2](screenshot/photo5_search_after.png)
+
+### 说明 
 是基于[structure_webApp](https://github.com/saucxs/structure_webApp)架子上进行添加业务逻辑。
 
