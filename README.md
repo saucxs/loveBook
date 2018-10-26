@@ -16,11 +16,9 @@ vue2 + vuex + vue-router + webpack + ES6 + axios + sass
 [https://github.com/saucxs/loveBook](https://github.com/saucxs/loveBook) 
 
 ### 演示地址
-[线上地址（正在开发其他模块）](http://book.mwcxs.top) 
-
+[线上地址](http://book.mwcxs.top) 
 
 ### 版本功能
-- [x] Element UI
 - [x] 热门模块-男生热门，女生热门，女频限免三部分
 - [x] 分类模块-男生，女生，出版三部分
 - [x] 分类详情模块-分为热门，新书，好评，完结，包月，根据小说内容分为全部，东方玄幻，异界大陆，异界争霸，远古神话
@@ -45,21 +43,6 @@ vue2 + vuex + vue-router + webpack + ES6 + axios + sass
     - 完成模糊搜索功能
     - 清空搜索历史功能
     - 修复bug：部署之后阅读章节返回的错误
-
-### 项目运行
-
-```   
-git clone https://github.com/saucxs/loveBook
-
-cd loveBook
-
-npm install
-
-npm run dev（本地运行 访问：http://localhost:8083）
-
-npm run build （部署上线 生成的dist文件夹放到服务器中即可：需要配置代理，如使用nginx，可参考下面问题中的配置）
-
-```
 
 ### 项目截图
 #### 热门模块
@@ -86,6 +69,22 @@ npm run build （部署上线 生成的dist文件夹放到服务器中即可：�
 ![搜索模块-1](screenshot/photo5_search_before.png)
 #### 搜索模块-搜索后
 ![搜索模块-2](screenshot/photo5_search_after.png)
+
+
+### 项目运行
+
+```   
+git clone https://github.com/saucxs/loveBook
+
+cd loveBook
+
+npm install
+
+npm run dev（本地运行 访问：http://localhost:8083）
+
+npm run build （部署上线 生成的dist文件夹放到服务器中即可：需要配置代理，如使用nginx，可参考下面问题中的配置）
+
+```
 
 ### 说明 
 是基于[structure_webApp](https://github.com/saucxs/structure_webApp)架子上进行添加业务逻辑。
