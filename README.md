@@ -44,33 +44,6 @@ vue2 + vuex + vue-router + webpack + ES6 + axios + sass
     - 清空搜索历史功能
     - 修复bug：部署之后阅读章节返回的错误
 
-### 项目截图
-#### 热门模块
-![热门模块](screenshot/photo2_featured.png)
-#### 分类模块
-![分类模块](screenshot/photo4_category.png)
-#### 分类详情模块
-![分类详情模块](screenshot/photo4_categoty_detail.png)
-#### 书籍详情模块
-![书籍详情模块](screenshot/photo3_book_detail.png)
-#### 书籍目录模块
-![书籍目录模块](screenshot/photo3_book_menu.png)
-#### 同类推荐列表模块
-![同类推荐列表模块](screenshot/photo3_same_book_list.png)
-#### 阅读模块
-![阅读模块](screenshot/photo3_reading_now.png)
-#### 阅读模块-夜间
-![阅读模块-夜间](screenshot/photo3_read_night.png)
-#### 立即阅读模块-设置
-![阅读模块-设置](screenshot/photo3_read_setting.png)
-#### 书架模块
-![书架模块](screenshot/photo5_book_shelf.png)
-#### 搜索模块-搜索前
-![搜索模块-1](screenshot/photo5_search_before.png)
-#### 搜索模块-搜索后
-![搜索模块-2](screenshot/photo5_search_after.png)
-
-
 ### 项目运行
 
 ```   
@@ -83,9 +56,20 @@ npm install
 npm run dev（本地运行 访问：http://localhost:8083）
 
 npm run build （部署上线 生成的dist文件夹放到服务器中即可：需要配置代理，如使用nginx，可参考下面问题中的配置）
-
 ```
 
-### 说明 
-是基于[structure_webApp](https://github.com/saucxs/structure_webApp)架子上进行添加业务逻辑。
+### 项目截图
+![热门模块](screenshot/photo2_featured.png)
+![分类模块](screenshot/photo4_category.png)
+![书籍详情模块](screenshot/photo3_book_detail.png)
+![阅读模块](screenshot/photo3_reading_now.png)
+![书架模块](screenshot/photo5_book_shelf.png)
+![搜索模块-1](screenshot/photo5_search_before.png)
 
+等等
+
+### 说明 
+
+【1】loveBook基于[structure_webApp](https://github.com/saucxs/structure_webApp)架构上进行添加业务逻辑。
+
+【2】使用cordova封装了混合androidApp-[loveBook](https://github.com/saucxs/loveBookApp)，基于这个项目应用的封装。
