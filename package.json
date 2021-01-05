@@ -13,7 +13,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "css-loader": "^0.28.4",
     "element-ui": "^2.4.8",
     "fastclick": "^1.0.6",
